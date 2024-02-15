@@ -44,7 +44,7 @@ conn.request("GET", "/repos/{}/contents/{}?ref={}".format(repo, path, ref), head
 response = conn.getresponse()
 
 if response.status != 200:
-    print("Error fetching {}:".format(subpath), response.status, response.reason)
+    print("Error fetching {}:".format(path), response.status, response.reason)
     print(response.read())
     exit(1)
 
